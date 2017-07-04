@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
         
         updateTitleView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.updateTitleView(text: "done")
+            self?.updateTitleView(text: "updated")
         }
     }
     
@@ -29,6 +29,6 @@ class SecondViewController: UIViewController {
 
         navigationItem.titleView = titleView
         label.text = text
-        print("done")
+        print(text)
     }
 }
