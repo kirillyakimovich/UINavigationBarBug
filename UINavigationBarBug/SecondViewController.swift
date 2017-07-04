@@ -9,6 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +19,16 @@ class SecondViewController: UIViewController {
         
         updateTitleView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.updateTitleView()
+            self?.updateTitleView(text: "done")
         }
     }
     
-    func updateTitleView() {
+    func updateTitleView(text: String? = nil) {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         titleView.backgroundColor = .red
 
         navigationItem.titleView = titleView
+        label.text = text
         print("done")
     }
 }

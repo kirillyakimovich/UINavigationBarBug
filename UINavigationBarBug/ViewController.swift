@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         title = "First"
     }
     @IBAction func buttonAction(_ sender: Any) {
-        let vc = SecondViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
         navigationController?.pushViewController(vc, animated: true)
     }
 }
-
