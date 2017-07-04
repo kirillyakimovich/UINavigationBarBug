@@ -25,12 +25,7 @@ class SecondViewController: UIViewController {
     func updateTitleView() {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         titleView.backgroundColor = .red
-        
-        titleView.translatesAutoresizingMaskIntoConstraints = false
-        titleView.layoutIfNeeded()
-        titleView.sizeToFit()
-        titleView.translatesAutoresizingMaskIntoConstraints = true
-        
+
         navigationItem.titleView = titleView
         print("done")
     }
