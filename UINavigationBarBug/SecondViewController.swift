@@ -23,6 +23,11 @@ class SecondViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("\(#function)")
+    }
+    
     func updateTitleView(text: String? = nil) {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         titleView.backgroundColor = .red
